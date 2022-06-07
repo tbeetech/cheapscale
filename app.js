@@ -1,7 +1,7 @@
+PORT = 5000
 const express = require('express')
-const PORT = 5000
+const routes = require('./routes/routes')
 const app = express()
-const routes = require('./routes')
-app.listen(PORT, ()=>{
-    console.log($`App running on port{PORT}`)
-})
+app.use('/routes/routes', routes)
+
+
