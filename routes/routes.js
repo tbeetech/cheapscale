@@ -1,8 +1,11 @@
 const express =  require('express')
 const router = express.Router()
 router.get('/', (req, res)=>{
-    console.log('home page is working')
+    res.render('index')
 })
 
+router.get('/test', (req, res) => {
+    res.send("route responding")
+})
 module.exports = router
 
